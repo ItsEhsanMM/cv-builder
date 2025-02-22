@@ -1,1 +1,36 @@
-@import "tailwindcss"
+@import 'tailwindcss';
+
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+@theme {
+  --color-primary: #4a90e2;
+  --color-secondary: #f5a623;
+  --color-background: #f8f9fa;
+  --color-text: #2c3e50;
+  --color-card: #fff;
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+  --color-error: #e74c3c;
+}
+
+@layer base {
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-text;
+  }
+  h1 {
+    @apply text-2xl font-bold;
+  }
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
